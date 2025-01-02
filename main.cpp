@@ -13,8 +13,6 @@
 uint32_t nodeVtable = 0x67B1C0;
 void DBEditor_PatchOnApply() {
 	NyaHookLib::Patch(0x558695 + 1, "PropertyDb: Table '%s' not found!");
-	NyaHookLib::Patch<uint32_t>(0x4ED804, 0);
-	NyaHookLib::Patch<uint32_t>(0x4EDB51, 0);
 	NyaHookLib::Fill(0x675268, 0x90, 0x675294-0x675268);
 }
 
